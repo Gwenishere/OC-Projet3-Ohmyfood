@@ -2,27 +2,28 @@ body {
     margin: 0;
     padding: 0; 
 }
-
 header {
     background: #579c87;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:  140px;
     }
-
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4em;
+    letter-spacing: -0.1em;
     color: #FccA46;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     }
 
 header a {
     text-decoration: none;
     }
 
-main {
+section {
     width: 900px;
     flex-direction: column;
     margin: auto;
@@ -49,15 +50,59 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-content: center;
+    
     }
 footer a {
     color:#FccA46;
     font-family: 'Roboto', sans-serif;
     font-size: large;
     text-decoration: none;
-    }
+}
+
 .mention {
-    margin-left: 10px;
+    box-sizing: border-box;
+}
+     .mention:hover {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+     }
+     @keyframes shake {
+       0%  { transform: translate(1px, 1px) rotate(0deg);}
+       10% { transform: translate(-1px, -2px) rotate(-1deg);}
+       20% { transform: translate(-3px, 0px) rotate(1deg);}
+       30% { transform: translate(3px, 2px) rotate(0deg);}
+       40% { transform: translate(1px, -1px) rotate(1deg);}
+       50% { transform: translate(-1px, 2px) rotate(-1deg);}
+       60% { transform: translate(-3px, 1px) rotate(0deg);}
+       70% { transform: translate(3px, 1px) rotate(-1deg);}
+       80% { transform: translate(-1px, -1px) rotate(1deg);}
+       90% { transform: translate(1px, 2px) rotate(0deg);}
+       100% { transform: translate(1px, -2px) rotate(-1deg);}
+      }
+   
+   .contact {
+    box-sizing: border-box;
     }
+     .contact:hover {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+     }
+     @keyframes shake {
+       0%  { transform: translate(1px, 1px) rotate(0deg);}
+       10% { transform: translate(-1px, -2px) rotate(-1deg);}
+       20% { transform: translate(-3px, 0px) rotate(1deg);}
+       30% { transform: translate(3px, 2px) rotate(0deg);}
+       40% { transform: translate(1px, -1px) rotate(1deg);}
+       50% { transform: translate(-1px, 2px) rotate(-1deg);}
+       60% { transform: translate(-3px, 1px) rotate(0deg);}
+       70% { transform: translate(3px, 1px) rotate(-1deg);}
+       80% { transform: translate(-1px, -1px) rotate(1deg);}
+       90% { transform: translate(1px, 2px) rotate(0deg);}
+       100% { transform: translate(1px, -2px) rotate(-1deg);}
+     }
+   
+   
+    
