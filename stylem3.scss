@@ -1,0 +1,223 @@
+$fontFootBtn: 'Roboto', sans-serif;
+$backHeadFootBtn: rgb(87,156, 135);
+$colorOMF: rgb(252, 202, 70);
+$widthElement: 400px;
+$heightElement: 500px;
+$displayMainContFoot: flex;
+$colorEntree:rgb(2, 40, 221);
+$colorPlat: rgb(6, 112, 243);
+$colorDessert: rgb(34, 157, 249);
+
+body {
+    margin: 0;
+    padding: 0; 
+}
+a {
+ text-decoration: none;
+}
+header {
+    background: $backHeadFootBtn; 
+    margin: 0;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    color: $colorOMF;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 0;
+    letter-spacing: -0.1em;
+}
+main {
+    width: 900px;
+    flex-direction: column;
+    margin:auto;
+    display:$displayMainContFoot;
+    margin-bottom: 140px;
+   }
+h2 {
+    text-align: center;
+    font-family: $fontFootBtn;
+    width: 900px;
+}
+article {
+       background: rgb(237, 239, 239);
+       box-shadow: 0 0 3px grey;
+       margin-bottom: 140px;
+}
+h3 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+	background: -webkit-linear-gradient($colorEntree, $colorDessert);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h4 {
+    text-align: center;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.entree h4 a{
+    position: relative;
+    padding: 1rem 0 0.5rem;
+    margin: 0 1.5rem;
+    color:  rgb(0, 0, 0);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 0% 100%;
+        width: 100%;
+        height: 1px;
+        background-color: $colorEntree;
+        transition: transform 250ms;
+  }  
+    &:hover {      
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+        }       
+    } 
+}
+.ico_trait2 {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+.plat_principal h4 a{
+    position: relative;
+    padding: 1rem 0 0.5rem;
+    margin: 0 1.5rem;
+    color:  rgb(0, 0, 0);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 0% 100%;
+        width: 100%;
+        height: 1px;
+        background-color: $colorPlat;
+        transition: transform 250ms;
+    }  
+     &:hover {      
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+        }       
+     }   
+}
+.dessert {
+  margin-bottom: 60px;
+}
+
+.dessert h4 a{
+    position: relative;
+    padding: 1rem 0 0.5rem;
+    margin: 0 1.5rem;
+    color:  rgb(0, 0, 0);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 0% 100%;
+        width: 100%;
+        height: 1px;
+        background-color: $colorDessert;
+        transition: transform 250ms;
+    }  
+     &:hover {      
+        &::after {
+            transform: translateX(-50%) scaleX(1);
+        }       
+     }   
+}
+li {
+    list-style: none;
+}
+.plat li, .prix li {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    padding-bottom: 10px;
+}
+.prix {
+    margin-right: 50px;
+}
+.conteneur {
+    display: $displayMainContFoot;
+    align-items: center;
+    justify-content: space-between;
+}
+.fin p {
+    text-align: center;
+    font-family: 'Devonshire', cursive;
+}
+footer {
+    background: $backHeadFootBtn;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: $displayMainContFoot;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    h5 {
+        font-weight: lighter;
+    }
+ a {
+    color:$colorOMF;
+    font-family: $fontFootBtn;
+    font-size: large;
+ }
+}
+.mention {
+ margin-left: 10px;
+ &:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    }
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+}
+.contact {
+ margin-right: 10px;
+ &:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+}
