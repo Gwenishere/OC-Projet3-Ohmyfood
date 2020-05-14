@@ -4,9 +4,9 @@ $colorOMF: rgb(252, 202, 70);
 $widthElement: 400px;
 $heightElement: 500px;
 $displayMainContFoot: flex;
-$colorEntree:rgb(70, 248, 129);
-$colorPlat: rgb(65, 225, 5);
-$colorDessert: rgb(63, 156, 28);
+$colorEntree:#46f881;
+$colorPlat: #41e105;
+$colorDessert: #3f9c1c;
 body {
     margin: 0;
     padding: 0; 
@@ -45,20 +45,46 @@ article {
     box-shadow: 0 0 3px grey;
     margin-bottom: 140px;
 }
+/*si besoin d'inclure logo*/
 .ico_logo {
 text-align: center;
 margin-top: 20px;
 }
+/*effet dégradé sur texte*/
+@mixin gradient-text($gradient, $bg : 'light') {
+    @supports(mix-blend-mode: lighten) {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;        
+        background: unquote($gradient);
+        pointer-events: none;
+      }  
+      @if ($bg == 'light') {
+        color: #000;
+        background: #fff;
+        mix-blend-mode: multiply;  
+        &::before {
+          mix-blend-mode: screen;
+        }
+      } @else {
+        color: #fff;
+        background: #000;
+        mix-blend-mode: lighten;
+        &::before {
+          mix-blend-mode: multiply;
+        }
+      }
+    }
+  }
 h3 {
     text-align: center;
     font-family: 'Kaushan Script', cursive;
     font-size: 3em;
-    background: -webkit-linear-gradient($colorEntree, $colorDessert);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
+    @include gradient-text('linear-gradient(to right, #3f9c1c, #46f881, #41e105, #3f9c1c, #22570f)', 'light');
+} 
 section {
     padding-left: 20px;
     padding-right: 20px;

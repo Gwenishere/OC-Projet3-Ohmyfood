@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -49,19 +50,41 @@ article {
   margin-bottom: 140px;
 }
 
+/*si besoin d'inclure logo*/
 .ico_logo {
   text-align: center;
   margin-top: 20px;
 }
 
+/*effet dégradé sur texte*/
 h3 {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   font-size: 3em;
-  background: -webkit-linear-gradient(#46f881, #3f9c1c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+@supports (mix-blend-mode: lighten) {
+  h3 {
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+  }
+  h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#3f9c1c), color-stop(#46f881), color-stop(#41e105), color-stop(#3f9c1c), to(#22570f));
+    background: linear-gradient(to right, #3f9c1c, #46f881, #41e105, #3f9c1c, #22570f);
+    pointer-events: none;
+  }
+  h3::before {
+    mix-blend-mode: screen;
+  }
 }
 
 section {
