@@ -4,6 +4,35 @@ $colorOMF: rgb(252, 202, 70);
 $widthElement: 400px;
 $heightElement: 500px;
 $displayMainContFoot: flex;
+/*effet dégradé sur texte*/
+@mixin gradient-text($gradient, $bg : 'light') {
+    @supports(mix-blend-mode: lighten) {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;        
+        background: unquote($gradient);
+        pointer-events: none;
+      }  
+      @if ($bg == 'light') {
+        color: #000;
+        background: #fff;
+        mix-blend-mode: multiply;  
+        &::before {
+          mix-blend-mode: screen;
+        }
+      } @else {
+        color: #fff;
+        background: #000;
+        mix-blend-mode: lighten;
+        &::before {
+          mix-blend-mode: multiply;
+        }
+      }
+    }
+}
 body {
     margin: 0;
     padding: 0; 
@@ -95,14 +124,11 @@ main {
      font-family: 'Amita', cursive;
      font-size: 2em;
      font-weight: lighter;
-     background: -webkit-linear-gradient(rgb(198, 116, 18), rgb(110, 76, 204)) ;
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
+     @include gradient-text('linear-gradient(to right, #C67412, #A56799, #6E4CCC)', 'light');
     }
     h3 {
     text-align: center;
-    color: rgb(198, 116, 18);/*revoir*/
+    color: rgb(198, 116, 18);
     }
    }
 .element3 {
@@ -125,10 +151,7 @@ main {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
-    background: -webkit-linear-gradient(rgb(75, 177, 255), rgb(6, 97, 245)) ;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-text('linear-gradient(to right, #0228dd, #0670f3, #229df9)', 'light');
    }
    h3 {
     text-align: center;
@@ -157,10 +180,7 @@ main {
      text-align: center;
      font-family: 'Kaushan Script', cursive;
      font-size: 3em;
-     background: -webkit-linear-gradient(rgb(69, 153, 62), rgb(26, 238, 6)) ;
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
+     @include gradient-text('linear-gradient(to right, #1aee06, #45993e, #a5f5bf)', 'light');
     }
     h3 {
     text-align: center;
