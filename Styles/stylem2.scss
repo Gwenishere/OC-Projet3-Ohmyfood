@@ -49,18 +49,44 @@ article {
 .ico_logo {
  text-align: center;
  margin-top: 20px;
-}    
+}
+/*effet dégradé sur texte*/
+@mixin gradient-text($gradient, $bg : 'light') {
+  @supports(mix-blend-mode: lighten) {
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;        
+      background: unquote($gradient);
+      pointer-events: none;
+    }  
+    @if ($bg == 'light') {
+      color: #000;
+      background: #fff;
+      mix-blend-mode: multiply;  
+      &::before {
+        mix-blend-mode: screen;
+      }
+    } @else {
+      color: #fff;
+      background: #000;
+      mix-blend-mode: lighten;
+      &::before {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+}   
 h3 {
  text-align: center;
  font-family: 'Amita', cursive;
  font-size: 2em;
  font-weight: lighter;
- background: -webkit-linear-gradient($colorEntree, $colorDessert) ;
- -webkit-background-clip: text;
- -moz-background-clip: text;
- background-clip: text;
- -webkit-text-fill-color: transparent;
+ @include gradient-text('linear-gradient(to right, #C67412, #A56799, #6E4CCC)', 'light');
 }
+
 section {
  padding-left: 20px;
  padding-right: 20px;

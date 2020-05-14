@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -54,15 +55,36 @@ article {
   margin-top: 20px;
 }
 
+/*effet dégradé sur texte*/
 h3 {
   text-align: center;
   font-family: 'Amita', cursive;
   font-size: 2em;
   font-weight: lighter;
-  background: -webkit-linear-gradient(#c67412, #6e4ccc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+@supports (mix-blend-mode: lighten) {
+  h3 {
+    position: relative;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+  }
+  h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#C67412), color-stop(#A56799), to(#6E4CCC));
+    background: linear-gradient(to right, #C67412, #A56799, #6E4CCC);
+    pointer-events: none;
+  }
+  h3::before {
+    mix-blend-mode: screen;
+  }
 }
 
 section {
