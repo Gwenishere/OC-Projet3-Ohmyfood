@@ -1,0 +1,30 @@
+/*mobile sous 768px*/
+@media screen and (max-width: 768px) {
+
+body {
+        font-size: 12px;
+}
+main {
+        width: auto;
+        margin: 0;
+        margin-bottom: 140px;
+}
+footer {
+        flex-direction: column-reverse;
+        font-size: 10px;
+        justify-content: flex-start;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+}
+.mentions {
+        margin-left: 0;
+}
+.contact {
+        margin-right: 0;
+}
+header {
+        margin: 0;
+        justify-content: center;
+}
+}
