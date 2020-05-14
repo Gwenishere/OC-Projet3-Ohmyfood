@@ -8,7 +8,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom:  140px;
-    }
+}
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4em;
@@ -17,13 +17,11 @@ h1 {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    }
-
+}
 header a {
     text-decoration: none;
-    }
-
-section {
+}
+main {
     width: 900px;
     flex-direction: column;
     margin: auto;
@@ -35,12 +33,10 @@ section {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
-    }
-
+}
 h2 {
     text-align: center;
 }
-
 footer {
     background: #579c87;
     position: fixed;
@@ -52,17 +48,17 @@ footer {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    align-content: center;
-    
+    align-content: center;    
     }
 footer a {
     color:#FccA46;
     font-family: 'Roboto', sans-serif;
     font-size: large;
     text-decoration: none;
+}
+footer h4 {
     font-weight:lighter;
 }
-
 .mention {
     box-sizing: border-box;
 }
@@ -82,8 +78,7 @@ footer a {
        80% { transform: translate(-1px, -1px) rotate(1deg);}
        90% { transform: translate(1px, 2px) rotate(0deg);}
        100% { transform: translate(1px, -2px) rotate(-1deg);}
-      }
-   
+      }   
    .contact {
     box-sizing: border-box;
     }
