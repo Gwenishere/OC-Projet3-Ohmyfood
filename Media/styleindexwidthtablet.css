@@ -1,0 +1,32 @@
+ /*tablettes de taille 1013 à 768 px  */
+ @media screen and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+}
+main {
+    width: auto;
+        margin: 0;
+}
+.conteneur1, .conteneur2 {
+    width: auto;
+    display: flex;
+    justify-content: center;
+
+}
+.element1, .element2, .element3, .element4 {
+display: inline-block;
+box-sizing: border-box;
+margin: 10px;
+}
+footer {
+    font-size: 12px;
+    justify-content: space-around; /*revoir ça*/
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h4 {
+ text-align: center;
+}
+
+ }

@@ -4,19 +4,24 @@
     body {
             font-size: 12px;
     }
+    /*revoir tout ça*/
     main {
-            width: auto;
+            width: auto; 
             margin: 0;
             margin-bottom: 140px;
     }
-.element1, .element3 {
-    margin-bottom: 20px;
-}
+    .element1, .element3 {
+
+        width: 100%;
+    }
+    .element2, .element4 {
+        width: 100%;
+    }
 .conteneur1, .conteneur2 {
     flex-direction: column;
     width: auto;
-    align-items: center;
-
+    display: inline-block;
+    justify-content: inherit;
 }
     footer {
             flex-direction: column-reverse;
