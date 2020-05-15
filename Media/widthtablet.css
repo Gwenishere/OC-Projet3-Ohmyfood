@@ -1,0 +1,19 @@
+ /*tablettes de taille 1013 à 768 px  */
+ @media screen and (max-width: 1024px) {
+    body {
+        font-size: 14px;
+}
+main {
+    width: auto;
+    margin: 0;
+    margin-bottom: 140px;
+}
+footer {
+    font-size: 12px;
+    justify-content: space-around; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ }

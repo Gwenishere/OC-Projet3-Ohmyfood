@@ -71,7 +71,7 @@ main {
     justify-content: space-between;
 }
 .element1 {
-    background: #fcdfdb;/*revoir*/
+    background: #fcdfdb;
     box-shadow:0 0 2em gray ;
     width: $widthElement;
     height: $heightElement;
@@ -224,10 +224,10 @@ footer {
    }
    .mention {
        margin-left: 10px;
-       &:hover {
+       /*Si je veux juste au passage de la souris
+       &:hover {*/
         animation: shake 0.5s;
         animation-iteration-count: infinite;
-       }
          @keyframes shake {
            0% { transform: translate(1px, 1px) rotate(0deg); }
            10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -244,10 +244,9 @@ footer {
       }
    .contact {
        margin-right: 10px;
-       &:hover {
+      /*si je veux au passage de la souris &:hover {*/
            animation: shake 0.5s;
            animation-iteration-count: infinite;
-       }
        @keyframes shake {
            0% { transform: translate(1px, 1px) rotate(0deg); }
            10% { transform: translate(-1px, -2px) rotate(-1deg); }
