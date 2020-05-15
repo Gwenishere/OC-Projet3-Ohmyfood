@@ -37,10 +37,13 @@ main {
   margin-bottom: 140px;
 }
 
+.nom {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h2 {
-  text-align: center;
   font-family: "Roboto", sans-serif;
-  width: 900px;
 }
 
 article {
@@ -253,9 +256,6 @@ footer a {
 
 .mention {
   margin-left: 10px;
-}
-
-.mention:hover {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;
@@ -358,9 +358,6 @@ footer a {
 
 .contact {
   margin-right: 10px;
-}
-
-.contact:hover {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;
