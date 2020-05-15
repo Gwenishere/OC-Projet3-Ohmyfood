@@ -36,20 +36,19 @@ main {
  display:$displayMainContFoot;
  margin-bottom: 140px;
 }
+.nom {
+  margin-right: auto;
+  margin-left: auto;
+  }
 h2 {
- text-align: center;
  font-family: $fontFootBtn;
- width: 900px;
 }
 article {
  background: rgb(255, 245, 254);
  box-shadow: 0 0 3px grey;
  margin-bottom: 140px;
 }
-.ico_logo {
- text-align: center;
- margin-top: 20px;
-}
+
 /*effet dégradé sur texte*/
 @mixin gradient-text($gradient, $bg : 'light') {
   @supports(mix-blend-mode: lighten) {
@@ -219,10 +218,8 @@ footer {
 }
 .mention {
  margin-left: 10px;
-  &:hover {
    animation: shake 0.5s;
    animation-iteration-count: infinite;
-  }
   @keyframes shake {
    0% { transform: translate(1px, 1px) rotate(0deg);}
    10% { transform: translate(-1px, -2px) rotate(-1deg);}
@@ -239,10 +236,8 @@ footer {
 }
 .contact {
  margin-right: 10px;
-  &:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
-  }
  @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg);}
     10% { transform: translate(-1px, -2px) rotate(-1deg);}
