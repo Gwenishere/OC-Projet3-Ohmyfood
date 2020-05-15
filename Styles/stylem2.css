@@ -37,10 +37,13 @@ main {
   margin-bottom: 140px;
 }
 
+.nom {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h2 {
-  text-align: center;
   font-family: "Roboto", sans-serif;
-  width: 900px;
 }
 
 article {
@@ -48,11 +51,6 @@ article {
   -webkit-box-shadow: 0 0 3px grey;
           box-shadow: 0 0 3px grey;
   margin-bottom: 140px;
-}
-
-.ico_logo {
-  text-align: center;
-  margin-top: 20px;
 }
 
 /*effet dégradé sur texte*/
@@ -265,9 +263,6 @@ footer a {
 
 .mention {
   margin-left: 10px;
-}
-
-.mention:hover {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;
@@ -370,9 +365,6 @@ footer a {
 
 .contact {
   margin-right: 10px;
-}
-
-.contact:hover {
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;
