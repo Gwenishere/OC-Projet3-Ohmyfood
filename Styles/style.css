@@ -59,7 +59,6 @@ main {
 
 .element1 {
   background: #fcdfdb;
-  /*revoir*/
   -webkit-box-shadow: 0 0 2em gray;
           box-shadow: 0 0 2em gray;
   width: 400px;
@@ -331,9 +330,8 @@ footer a {
 
 .mention {
   margin-left: 10px;
-}
-
-.mention:hover {
+  /*Si je veux juste au passage de la souris
+       &:hover {*/
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;
@@ -436,9 +434,7 @@ footer a {
 
 .contact {
   margin-right: 10px;
-}
-
-.contact:hover {
+  /*si je veux au passage de la souris &:hover {*/
   -webkit-animation: shake 0.5s;
           animation: shake 0.5s;
   -webkit-animation-iteration-count: infinite;

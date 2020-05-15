@@ -10,20 +10,16 @@
             margin: 0;
             margin-bottom: 140px;
     }
-    .element1, .element3 {
-
-        width: 100%;
-    }
-    .element2, .element4 {
-        width: 100%;
-    }
-.conteneur1, .conteneur2 {
+ .element1, .element3,.element2, .element4 {
+      width: 100%;
+   }
+ .conteneur1, .conteneur2 {
     flex-direction: column;
-    width: auto;
+
     display: inline-block;
     justify-content: inherit;
-}
-    footer {
+ }
+footer {
             flex-direction: column-reverse;
             font-size: 10px;
             justify-content: flex-start;
@@ -31,15 +27,15 @@
             margin: 0;
             padding: 0;
     }
-    .mentions {
+.mentions {
             margin-left: 0;
     }
-    .contact {
+.contact {
             margin-right: 0;
     }
-    header {
+header {
             margin: 0;
             justify-content: center;
-    }
-    }
+       }
+}
     
