@@ -11,9 +11,13 @@
     }
     h2 {
         width: auto;
+        justify-content: center;
     }
     li {
         display: inline-block;
+    }
+  .ico_trait, .ico_trait2 {
+           max-width: 75px;
     }
     footer {
             flex-direction: column-reverse;
