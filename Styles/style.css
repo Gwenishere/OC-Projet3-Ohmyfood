@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*effet dégradé sur texte*/
 body {
   margin: 0;
   padding: 0;
@@ -131,30 +129,11 @@ main {
   font-family: 'Amita', cursive;
   font-size: 2em;
   font-weight: lighter;
-}
-
-@supports (mix-blend-mode: lighten) {
-  .element2 h2 {
-    position: relative;
-    color: #000;
-    background: #fff;
-    mix-blend-mode: multiply;
-  }
-  .element2 h2::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#C67412), color-stop(#A56799), to(#6E4CCC));
-    background: linear-gradient(to right, #C67412, #A56799, #6E4CCC);
-    pointer-events: none;
-  }
-  .element2 h2::before {
-    mix-blend-mode: screen;
-  }
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#C67412), to(#6E4CCC));
+  background: linear-gradient(to right, #C67412 0%, #6E4CCC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .element2 h3 {
@@ -191,30 +170,10 @@ main {
   text-align: center;
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
-}
-
-@supports (mix-blend-mode: lighten) {
-  .element3 h2 {
-    position: relative;
-    color: #000;
-    background: #fff;
-    mix-blend-mode: multiply;
-  }
-  .element3 h2::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#0228dd), color-stop(#0670f3), to(#229df9));
-    background: linear-gradient(to right, #0228dd, #0670f3, #229df9);
-    pointer-events: none;
-  }
-  .element3 h2::before {
-    mix-blend-mode: screen;
-  }
+  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#0228dd));
+  background: linear-gradient(to right, #30CFD0 0%, #0228dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .element3 h3 {
@@ -252,30 +211,10 @@ main {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   font-size: 3em;
-}
-
-@supports (mix-blend-mode: lighten) {
-  .element4 h2 {
-    position: relative;
-    color: #000;
-    background: #fff;
-    mix-blend-mode: multiply;
-  }
-  .element4 h2::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: -webkit-gradient(linear, left top, right top, from(#1aee06), color-stop(#45993e), to(#a5f5bf));
-    background: linear-gradient(to right, #1aee06, #45993e, #a5f5bf);
-    pointer-events: none;
-  }
-  .element4 h2::before {
-    mix-blend-mode: screen;
-  }
+  background: -webkit-gradient(linear, left top, right top, from(#1aee06), to(#a5f5bf));
+  background: linear-gradient(to right, #1aee06 0%, #a5f5bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .element4 h3 {
