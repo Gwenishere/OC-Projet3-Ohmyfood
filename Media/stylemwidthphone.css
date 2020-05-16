@@ -15,7 +15,9 @@
     }
     li {
         display: inline-block;
+        width: 100%;
     }
+
   .ico_trait, .ico_trait2 {
            max-width: 75px;
     }
